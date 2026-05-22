@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michelly Reis | Micropigmentação & Estética do Olhar</title>
+
+    <!-- Meta tags adicionais de segurança e privacidade -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Script de Segurança: Bloqueia Clickjacking com verificação de permissão para evitar erros de iframe -->
+    <script>
+        try {
+            if (self !== top) {
+                if (top.location.host === self.location.host) {
+                    top.location = self.location;
+                }
+            }
+        } catch (e) {
+            console.log("Ambiente de visualização protegido ativo.");
+        }
+    </script>
+
+    <!-- Fontes Elegantes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Ícones do Font Awesome (Acessado via canal de CDN seguro) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        /* Variáveis de Cores - Paleta Premium/Nude */
+        :root {
+            --primary-color: #c49a7a;
+            /* Nude/Cobre elegante */
+            --primary-dark: #a37c5f;
+            --bg-light: #faf7f5;
+            /* Fundo off-white creme */
+            --text-dark: #3b302a;
+            /* Castanho escuro para texto */
+            --text-light: #7a6e67;
+            --whatsapp: #25d366;
+            --white: #ffffff;
+        }
+
+        /* Reset e Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Cabeçalho */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: transparent;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* Logo com Ícone SVG Integrado */
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo svg {
+            width: 32px;
+            height: 32px;
+            fill: none;
+            stroke: var(--primary-color);
+            stroke-width: 1.5;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            color: var(--text-dark);
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            color: var(--primary-color);
+            font-style: italic;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-icons a {
+            color: var(--text-dark);
+            font-size: 20px;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .social-icons a span {
+            font-size: 15px;
+            font-weight: 600;
+            margin-left: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Secção Hero (Principal) */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 8%;
+            background: linear-gradient(to right, var(--bg-light) 50%, #f0e9e4 100%);
+            position: relative;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+            padding-top: 80px;
+            /* Compensa o cabeçalho absoluto */
+        }
+
+        .hero-tag {
+            display: inline-block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 5px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: var(--text-dark);
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--text-dark);
+            color: var(--white);
+            box-shadow: 0 10px 20px rgba(59, 48, 42, 0.15);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(200, 154, 122, 0.25);
+            color: var(--white);
+        }
+
+        .btn i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+        }
+
+        /* Moldura de arco elegante para a foto */
+        .image-arch {
+            width: 450px;
+            height: 550px;
+            background-color: var(--white);
+            border: 1px solid #e8e0db;
+            border-radius: 225px 225px 0 0;
+            /* Formato de arco */
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-arch img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Recorta e ajusta a imagem de forma harmoniosa */
+            display: block;
+            z-index: 1;
+        }
+
+        /* Contentor do logótipo reserva (Caso dê erro ou carregue no preview) */
+        .logo-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, #ffffff 60%, #f7f1ec 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            text-align: center;
+            z-index: 0;
+        }
+
+        .logo-placeholder svg {
+            width: 120px;
+            height: 120px;
+            fill: none;
+            stroke: var(--primary-color);
+            stroke-width: 1.2;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .logo-placeholder h3 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            color: var(--text-dark);
+        }
+
+        .logo-placeholder p {
+            font-size: 13px;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 400;
+        }
+
+        /* Borda decorativa externa dourada */
+        .image-arch::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            bottom: 10px;
+            left: 10px;
+            border: 1px solid var(--primary-color);
+            border-radius: 215px 215px 0 0;
+            z-index: 2;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        /* Serviços */
+        .services {
+            padding: 100px 8%;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+            font-weight: 300;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            padding: 40px 30px;
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            text-align: center;
+            border: 1px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            background-color: var(--white);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 2px;
+            transition: color 0.3s;
+        }
+
+        .service-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Rodapé / CTA Final */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: 60px 8% 30px;
+            text-align: center;
+        }
+
+        .footer-cta {
+            margin-bottom: 50px;
+        }
+
+        .footer-cta h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp);
+            color: var(--white);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1fae51;
+            transform: translateY(-3px);
+            color: var(--white);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 120px;
+                padding-bottom: 60px;
+            }
+
+            .hero-content {
+                margin-bottom: 60px;
+                padding-top: 0;
+            }
+
+            .hero-image {
+                justify-content: center;
+                width: 100%;
+            }
+
+            .image-arch {
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+                aspect-ratio: 450 / 550;
+                border-radius: 200px 200px 0 0;
+            }
+
+            .image-arch::after {
+                border-radius: 190px 190px 0 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .services {
+                padding: 60px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="brand-logo">
+            <!-- Logótipo Vetorial Fino: Flor de Lótus/Olhar do Design de Sobrancelha -->
+            <svg viewBox="0 0 100 100">
+                <path d="M50,25 C30,45 30,55 50,75 C70,55 70,45 50,25 Z" />
+                <path d="M50,35 C38,47 38,53 50,65 C62,53 62,47 50,35 Z" opacity="0.7" />
+                <circle cx="50" cy="50" r="4" fill="#c49a7a" />
+            </svg>
+            <div class="logo-text">Michelly Reis<span>.</span></div>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/michellyreis.esteticafacial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/michelly.reis.106" target="_blank" rel="noopener noreferrer"
+                title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/5535988570279" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i
+                    class="fab fa-whatsapp"></i> <span>(35) 98857-0279</span></a>
+        </div>
+    </header>
+
+    <!-- Secção Hero (Principal) -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-tag">Especialista em Estética do Olhar</div>
+            <h1>Desperte a beleza do seu olhar com <span>naturalidade.</span></h1>
+            <p>Realce sua autoestima com techniques exclusivas de micropigmentação. Sobrancelhas perfeitas e desenhadas
+                sob medida para harmonizar com o seu rosto.</p>
+
+            <a href="https://wa.me/5535988570279?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+                target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fab fa-whatsapp"></i> Agendar Avaliação
+            </a>
+        </div>
+
+        <div class="hero-image">
+            <div class="image-arch">
+                <!-- Logótipo reserva de transição que fica por baixo da foto (Z-Index) -->
+                <div class="logo-placeholder">
+                    <svg viewBox="0 0 100 100">
+                        <path d="M50,20 C25,45 25,55 50,80 C75,55 75,45 50,20 Z" />
+                        <path d="M50,32 C34,46 34,54 50,68 C66,54 66,46 50,32 Z" opacity="0.6" />
+                        <circle cx="50" cy="50" r="6" fill="#c49a7a" />
+                    </svg>
+                    <h3>Michelly Reis</h3>
+                    <p>Estética Facial</p>
+                </div>
+                <!-- Imagem Corrigida para buscar 'fioafio.jpg' -->
+                <img src="fioafio.jpg" id="main-image" alt="Antes e Depois de Micropigmentação por Michelly Reis"
+                    onerror="this.style.display='none';">
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="services">
+        <h2 class="section-title">Técnicas Exclusivas</h2>
+        <p class="section-subtitle">Procedimentos realizados com materiais de altíssima qualidade, garantindo segurança,
+            durabilidade e um resultando extremamente natural.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-feather-alt"></i></div>
+                <h3>Micropigmentação Fio a Fio</h3>
+                <p>A técnica mais procurada para quem deseja um resultado hiper-realista. Simulamos os fios naturais
+                    para preencher falhas e dar volume.</p>
+                <a href="https://wa.me/5535988570279?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Micropigmenta%C3%A7%C3%A3o%20Fio%20a%20Fio."
+                    target="_blank" rel="noopener noreferrer" class="service-link">Saber mais</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-magic"></i></div>
+                <h3>Shadow / Ombré</h3>
+                <p>Efeito de maquilhagem suave. Ideal para quem gosta de sobrancelhas mais marcadas e com aquele efeito
+                    de sombra perfeito.</p>
+                <a href="https://wa.me/5535988570279?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20t%C3%A9cnica%20Shadow/Ombr%C3%A9."
+                    target="_blank" rel="noopener noreferrer" class="service-link">Saber mais</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-cut"></i></div>
+                <h3>Design Estratégico</h3>
+                <p>Mapeamento facial completo para encontrar o desenho ideal para o seu formato de rosto, com ou sem
+                    aplicação de Henna.</p>
+                <a href="https://wa.me/5535988570279?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Design%20Estrat%C3%A9gico."
+                    target="_blank" rel="noopener noreferrer" class="service-link">Saber mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-cta">
+            <h2>Pronta para transformar seu olhar?</h2>
+            <p style="margin-bottom: 30px; font-weight: 300; opacity: 0.8;">Clique no botão abaixo e fale diretamente
+                com a nossa equipa no WhatsApp para tirar dúvidas ou agendar o seu horário.</p>
+            <a href="https://wa.me/5535988570279?text=Ol%C3%A1!%20Vi%20o%20seu%20site%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas."
+                target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+            </a>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Michelly Reis Micropigmentação. Todos os direitos reservados.
+        </div>
+    </footer>
+
+</body>
+
+</html>
