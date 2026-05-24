@@ -1,14 +1,14 @@
-👁️ Michelly Reis | Micropigmentação & Estética do Olhar
+
 
 Landing Page premium desenvolvida para a especialista em micropigmentação e estética facial Michelly Reis, focada em conversão, elegância e design responsivo.
 
-📱 Sobre o Projeto
+- Sobre o Projeto
 
 Este projeto consiste numa Landing Page de Alta Conversão desenvolvida com tecnologias web modernas, criada especificamente para capturar novos clientes e agendar avaliações diretamente via WhatsApp.
 
 O design adota uma paleta de cores nude/cobre sofisticada, transmitindo um posicionamento premium e luxuoso, ideal para o nicho de estética e beleza.
 
-🌟 Funcionalidades Principais:
+- Funcionalidades Principais:
 
 Design Responsivo: Adaptado perfeitamente para qualquer dispositivo (Telemóvel, Tablet e Computador).
 
@@ -20,7 +20,7 @@ Foco em Conversão: Botões estratégicos e flutuantes de chamada para ação (C
 
 Hospedagem de Alta Performance: Publicado na CDN global do Netlify.
 
-🛠️ Tecnologias Utilizadas
+- Tecnologias Utilizadas
 
 HTML5 — Estruturação semântica e acessível.
 
@@ -30,7 +30,7 @@ JavaScript — Scripts de segurança ativa e comportamento dinâmico.
 
 Font Awesome & Google Fonts — Ícones e tipografia de alta qualidade.
 
-📂 Como executar o projeto localmente
+- Como executar o projeto localmente
 
 Clona este repositório para o teu computador:
 
@@ -41,7 +41,7 @@ Garante que tens a imagem fioafio.jpg na mesma pasta do ficheiro index.html.
 
 Abre o ficheiro index.html no teu navegador ou inicia o servidor local usando a extensão Live Server no VS Code.
 
-🔗 Link do Projeto no Ar
+- Link do Projeto no Ar
 
 O site pode ser acedido através do link oficial: michellyreismicropigmentadora.netlify.app
 
